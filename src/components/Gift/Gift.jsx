@@ -42,6 +42,8 @@ const GiftWrapper = styled.div`
     height: 100vh;
     animation: ${GiftAnimation} 1s infinite;
     cursor: pointer;
+    overflow: hidden;
+    margin: 2rem;  
     
 `
 
@@ -52,7 +54,7 @@ const Gift = ({ isOpen }) => {
         animation.current.play();
         setTimeout(() => {
             isOpen(true)
-        }, 1800);
+        }, 1200);
     }
 
   return (
@@ -65,5 +67,5 @@ const Gift = ({ isOpen }) => {
 export default Gift
 
 Gift.propTypes = {
-    isOpen: propTypes.bool
+    isOpen: propTypes.func
 }

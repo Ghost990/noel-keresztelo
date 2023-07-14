@@ -5,10 +5,22 @@ import InviteImage from '../../assets/meghivo.png'
 import "animate.css"
 
 const CardWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 2rem;
+    position: relative;
     img {
         width: 60vw;
         height: auto;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    @media (max-width: 768px) {
+        margin: 0;
+        img {
+            width: 100%;
+        }
     }
 `
 

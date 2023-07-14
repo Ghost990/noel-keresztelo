@@ -8,6 +8,11 @@ const TextWrapper = styled.div`
     padding: 15px 0;
     max-width: 800px;
     text-align: center;
+    margin-top: 30px;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 30px;
+    }
 `
 
 const Text = ({text}) => {

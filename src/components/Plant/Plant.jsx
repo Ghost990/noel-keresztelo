@@ -4,6 +4,9 @@ import PlantImage from '../../assets/plant1.svg'
 
 const PlantWrapper = styled.div`
     position: relative;
+    @media (max-width: 768px) {
+        opacity: 0.2;
+    }
 `
 
 const PlantTopLeft = styled.div`
