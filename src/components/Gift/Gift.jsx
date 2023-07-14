@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react'
+import propTypes from 'prop-types'
 import styled, {keyframes} from 'styled-components'
 import Lottie from "lottie-react";
 import GiftAnim from '../../assets/gift.json'
@@ -40,14 +41,18 @@ const GiftWrapper = styled.div`
     width: 100vw;
     height: 100vh;
     animation: ${GiftAnimation} 1s infinite;
+    cursor: pointer;
     
 `
 
-const Gift = () => {
+const Gift = ({ isOpen }) => {
     const animation = useRef(null)
 
     const handlePlayAnimation = () => {
         animation.current.play();
+        setTimeout(() => {
+            isOpen(true)
+        }, 1800);
     }
 
   return (
@@ -58,3 +63,7 @@ const Gift = () => {
 }
 
 export default Gift
+
+Gift.propTypes = {
+    isOpen: propTypes.bool
+}

@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import NoelLogo from '../../assets/noel-logo.svg'
 
-const LogoWrapper = styled.div``
+const LogoWrapper = styled.div`
+    
+`
 
 const Logo = () => {
   return (
