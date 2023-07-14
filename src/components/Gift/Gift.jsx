@@ -44,7 +44,13 @@ const GiftWrapper = styled.div`
     cursor: pointer;
     overflow: hidden;
     margin: 2rem;  
-    
+    @media (max-width: 768px) {
+        svg {
+            width: 200% !important;
+            height: 200% !important;
+            margin-left: -50% !important;
+        }
+    }
 `
 
 const Gift = ({ isOpen }) => {

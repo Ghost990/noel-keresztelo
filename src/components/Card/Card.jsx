@@ -18,6 +18,9 @@ const CardWrapper = styled.div`
     }
     @media (max-width: 768px) {
         margin: 0;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-top: 5vh;
         img {
             width: 100%;
         }
