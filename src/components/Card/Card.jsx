@@ -1,7 +1,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
-import InviteImage from '../../assets/meghivo.png'
+import InviteImageHu from '../../assets/noel-keresztelo-invite_hu.png'
+import InviteImageSrb from '../../assets/noel-keresztelo-invite_hu.png'
 import "animate.css"
 
 const CardWrapper = styled.div`
@@ -27,11 +28,17 @@ const CardWrapper = styled.div`
     }
 `
 
-const Card = ({ isOpen }) => {
+const Card = ({ isOpen, language }) => {
+
+    const LinkHu = 'https://allusion.hu/noel-keresztelo-invite_hu.pdf'
+    const LinkSrb = 'https://allusion.hu/noel-keresztelo-invite_hu.pdf'
+
   return (
     <div className={`animate__animated animate__zoomInUp`}>
         <CardWrapper>
-            <img src={InviteImage}  alt="Meghívó" />
+            <a href={language === 'hu' ? LinkHu : LinkSrb} target="_blank" rel="noopener noreferrer">
+                <img src={language === 'hu' ? InviteImageHu : InviteImageSrb}  alt="Meghívó" />
+            </a>
         </CardWrapper>
     </div>
   )
@@ -40,5 +47,6 @@ const Card = ({ isOpen }) => {
 export default Card
 
 Card.propTypes = {
-    isOpen: propTypes.bool
+    isOpen: propTypes.bool,
+    language: propTypes.string
 }
