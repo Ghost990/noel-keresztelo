@@ -6,6 +6,7 @@ import Logo from "../components/Logo/Logo"
 import Plant from "../components/Plant/Plant"
 import Text from "../components/Text/Text"
 import Card from "../components/Card/Card"
+import Language from "../components/Language/Language"
 
 const Wrapper = styled.div`
   display: flex;
@@ -60,7 +61,9 @@ const Overlay = styled.div`
 const IndexPage = () => {
   const [isOpenGift, setIsOpenGift] = useState(false)
   const [isOverlayOpen, setIsOverlayOpen] = useState(false)
-  const introText = "Légy szíves, kattints az ajándékdobozra, hogy megtekinthesd a részleteket!"
+  const introTextHu = "Légy szíves, kattints az ajándékdobozra, hogy megtekinthesd a részleteket!"
+  const introTextSrb = "Srb intro text"
+  const [selectedLanguage, setSelectedLanguage] = useState("hu")
 
 
   useEffect(() => {
@@ -75,16 +78,31 @@ const IndexPage = () => {
     }
   }, [isOpenGift])
 
+  useEffect(() => {
+    const selectedLanguage = localStorage.getItem("language")
+    if (selectedLanguage && selectedLanguage === "hu") {
+      setSelectedLanguage("hu")
+    } else {
+      setSelectedLanguage("srb")
+    }
+
+    if (!selectedLanguage) {
+      localStorage.setItem("language", "hu")
+    }
+  }, [])
+
+
   return (
     <>
     <GlobalStyle />
-    {isOverlayOpen && <Overlay><Card isOpen={isOpenGift} /></Overlay>}
+    {isOverlayOpen && <Overlay><Card language={selectedLanguage} isOpen={isOpenGift} /></Overlay>}
     <Plant />
     <Wrapper>
+      <Language currentLanguage={selectedLanguage} />
       <LogoWrapper>
         <Logo />
       </LogoWrapper>
-      <Text text={introText} />
+      <Text text={selectedLanguage === 'hu' ? introTextHu : introTextSrb} />
       <GiftingWrapper>
         <GiftWrapper>
           <Gift isOpen={setIsOpenGift} />
