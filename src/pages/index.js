@@ -95,7 +95,7 @@ const IndexPage = () => {
   return (
     <>
     <GlobalStyle />
-    {isOverlayOpen && <Overlay><Card isOpen={isOpenGift} /></Overlay>}
+    {isOverlayOpen && <Overlay><Card language={selectedLanguage} isOpen={isOpenGift} /></Overlay>}
     <Plant />
     <Wrapper>
       <Language currentLanguage={selectedLanguage} />
