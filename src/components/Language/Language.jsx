@@ -12,6 +12,9 @@ const LanguageWrapper = styled.div`
     margin: 15px 0;
     position: relative;
     z-index: 1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #7CA669;
 `
 
 const FlagWrapper = styled.div`
