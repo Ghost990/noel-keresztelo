@@ -8,6 +8,9 @@ import Text from "../components/Text/Text"
 import Card from "../components/Card/Card"
 import Language from "../components/Language/Language"
 import Seo from "../components/Seo/Seo"
+import Birds from "../components/Birds/Birds"
+import Monkey from "../components/Monkey/Monkey"
+import Sloth from "../components/Sloth/Sloth"
 
 const Wrapper = styled.div`
   display: flex;
@@ -78,6 +81,28 @@ const OverlayIcon = styled.div`
   }
 `
 
+const BirdsWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+`
+
+const SlothWrapper = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 30%;
+  height: auto;
+  @media (max-width: 768px) {
+    width: 50%;
+    top: 5%;
+    margin-left: -30px;
+    z-index: 1;
+  }
+`
+
 
 
 const IndexPage = () => {
@@ -133,6 +158,12 @@ const IndexPage = () => {
       </OverlayIcon></div><Card language={selectedLanguage} isOpen={isOpenGift} /></Overlay>}
     <Plant />
     <Wrapper>
+      <BirdsWrapper>
+        <Birds />
+      </BirdsWrapper>
+      <SlothWrapper>
+        <Sloth />
+      </SlothWrapper>
       <Language currentLanguage={selectedLanguage} />
       <LogoWrapper>
         <Logo currentLanguage={selectedLanguage} />

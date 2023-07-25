@@ -4,6 +4,7 @@ import PlantImage from '../../assets/plant1.svg'
 
 const PlantWrapper = styled.div`
     position: relative;
+    z-index: 1;
     @media (max-width: 768px) {
         opacity: 0.2;
     }
