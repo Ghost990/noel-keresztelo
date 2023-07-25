@@ -9,7 +9,6 @@ import Card from "../components/Card/Card"
 import Language from "../components/Language/Language"
 import Seo from "../components/Seo/Seo"
 import Birds from "../components/Birds/Birds"
-import Monkey from "../components/Monkey/Monkey"
 import Sloth from "../components/Sloth/Sloth"
 
 const Wrapper = styled.div`
