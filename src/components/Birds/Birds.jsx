@@ -27,7 +27,7 @@ const Birds = () => {
     }, [])
 
   return (
-    <BirdsWrapper><Lottie loop={true} lottieRef={animation} animationData={BirdsAnimation} autoplay={true} /></BirdsWrapper>
+    <BirdsWrapper className='animate__animated animate__fadeIn animate__delay-2s'><Lottie loop={true} lottieRef={animation} animationData={BirdsAnimation} autoplay={true} /></BirdsWrapper>
   )
 }
 

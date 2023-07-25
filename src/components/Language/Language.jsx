@@ -20,6 +20,7 @@ const LanguageWrapper = styled.div`
     &:hover {
         background-color: #7CA669;
         color: #fff;
+        z-index: 99;
     }
 
 `

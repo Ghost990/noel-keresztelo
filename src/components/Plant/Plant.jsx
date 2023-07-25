@@ -7,6 +7,7 @@ const PlantWrapper = styled.div`
     z-index: 1;
     @media (max-width: 768px) {
         opacity: 0.2;
+        z-index: -1;
     }
     .animate__animated.animate__fadeInLeft {
         --animate-duration: 1.5s;
