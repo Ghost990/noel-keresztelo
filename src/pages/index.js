@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: auto;
   flex-direction: column;
+  overflow-x: hidden;
   @media (max-width: 768px) {
     width: 100%;
     overflow-x: hidden;
@@ -26,7 +27,7 @@ const LogoWrapper = styled.div`
 `
 
 const GiftingWrapper = styled.div`
-
+overflow: hidden;
 
 `
 
@@ -62,7 +63,7 @@ const IndexPage = () => {
   const [isOpenGift, setIsOpenGift] = useState(false)
   const [isOverlayOpen, setIsOverlayOpen] = useState(false)
   const introTextHu = "Légy szíves, kattints az ajándékdobozra, hogy megtekinthesd a részleteket!"
-  const introTextSrb = "Srb intro text"
+  const introTextSrb = "Molim te klikni na poklon kutiju za dalje detalje"
   const [selectedLanguage, setSelectedLanguage] = useState("hu")
 
 
@@ -100,7 +101,7 @@ const IndexPage = () => {
     <Wrapper>
       <Language currentLanguage={selectedLanguage} />
       <LogoWrapper>
-        <Logo />
+        <Logo currentLanguage={selectedLanguage} />
       </LogoWrapper>
       <Text text={selectedLanguage === 'hu' ? introTextHu : introTextSrb} />
       <GiftingWrapper>
