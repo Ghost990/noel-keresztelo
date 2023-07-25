@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import Lottie from "lottie-react"
 import SlothAnimation from '../../assets/sloth.json'
 
-const SlothWrapper = styled.div``
+const SlothWrapper = styled.div`
+    overflow: hidden;
+`
 
 const Sloth = () => {
   return (

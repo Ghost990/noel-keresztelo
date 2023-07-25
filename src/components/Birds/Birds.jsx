@@ -4,7 +4,9 @@ import Lottie from "lottie-react";
 import BirdsAnimation from '../../assets/birds.json'
 
 
-const BirdsWrapper = styled.div``
+const BirdsWrapper = styled.div`
+    overflow: hidden;
+`
 
 const Birds = () => {
     const animation = useRef(null)

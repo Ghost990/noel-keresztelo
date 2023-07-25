@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: #FFF8E9;
     position: relative;
-    
   }
 `;
 
