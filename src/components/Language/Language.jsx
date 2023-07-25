@@ -11,7 +11,7 @@ const LanguageWrapper = styled.div`
     width: 100%;
     margin: 15px 0;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #7CA669;

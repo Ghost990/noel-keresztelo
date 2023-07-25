@@ -173,9 +173,7 @@ const IndexPage = () => {
           <Gift isOpen={setIsOpenGift} />
         </GiftWrapper>
       </GiftingWrapper>
-      
     </Wrapper>
-    
     </>
   )
 }
