@@ -7,7 +7,7 @@ import Plant from "../components/Plant/Plant"
 import Text from "../components/Text/Text"
 import Card from "../components/Card/Card"
 import Language from "../components/Language/Language"
-import Seo from "../components/seo/Seo"
+import Seo from "../components/Seo/Seo"
 
 const Wrapper = styled.div`
   display: flex;
