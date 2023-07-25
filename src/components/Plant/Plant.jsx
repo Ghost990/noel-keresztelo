@@ -27,6 +27,7 @@ const PlantBottomRight = styled.div`
     left: 80%;
     bottom: -50px;
     transform: rotate(180deg);
+    width: 25%;
 `
 
 const Plant = () => {

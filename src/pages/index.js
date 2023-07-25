@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: auto;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   @media (max-width: 768px) {
     width: 100%;
     overflow-x: hidden;
@@ -86,8 +86,11 @@ const BirdsWrapper = styled.div`
   left: 0;
   width: 100%;
   height: auto;
+  overflow: hidden !important;
   @media (max-width: 768px) {
-    width: 200%;
+    top: 5%;
+    overflow-x: hidden;
+  }
 `
 
 const SlothWrapper = styled.div`
@@ -96,6 +99,7 @@ const SlothWrapper = styled.div`
   left: 0;
   width: 30%;
   height: auto;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 50%;
     top: 5%;
