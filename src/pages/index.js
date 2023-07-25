@@ -86,6 +86,8 @@ const BirdsWrapper = styled.div`
   left: 0;
   width: 100%;
   height: auto;
+  @media (max-width: 768px) {
+    width: 200%;
 `
 
 const SlothWrapper = styled.div`
