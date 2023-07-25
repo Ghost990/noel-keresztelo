@@ -17,7 +17,7 @@ const PlantTopLeft = styled.div`
     position: fixed;
     top: -50px;
     left: -50px;
-    width: 100%;
+    width: 25%;
 `
 
 const PlantBottomRight = styled.div`
