@@ -54,7 +54,7 @@ const Overlay = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(255, 248, 233, 0.8);
+  background: rgba(255, 248, 233, 0.85);
   z-index: 2;
   .close-icon {
     position: absolute;
@@ -71,6 +71,10 @@ const OverlayIcon = styled.div`
   svg {
     width: 50px;
     height: 50px;
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 `
 
