@@ -15,6 +15,13 @@ const LanguageWrapper = styled.div`
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #7CA669;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #7CA669;
+        color: #fff;
+    }
+    
 `
 
 const FlagWrapper = styled.div`
