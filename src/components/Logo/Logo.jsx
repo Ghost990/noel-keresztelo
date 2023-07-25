@@ -10,7 +10,7 @@ const LogoWrapper = styled.div`
       margin: 0 auto;
       img {
         width: 100%;
-
+        max-width: 550px;
       }
     }
 `

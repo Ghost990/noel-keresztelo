@@ -65,7 +65,9 @@ const Gift = ({ isOpen }) => {
 
   return (
     <GiftWrapper>
-        <Lottie onClick={handlePlayAnimation} loop={false} lottieRef={animation} animationData={GiftAnim} autoplay={false} />
+        {isOpen && (
+          <Lottie onClick={handlePlayAnimation} loop={false} lottieRef={animation} animationData={GiftAnim} autoplay={false} />
+        )}
     </GiftWrapper>
   )
 }
