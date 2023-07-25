@@ -7,6 +7,7 @@ import Plant from "../components/Plant/Plant"
 import Text from "../components/Text/Text"
 import Card from "../components/Card/Card"
 import Language from "../components/Language/Language"
+import Seo from "../components/seo/Seo"
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: auto;
   flex-direction: column;
+  overflow-x: hidden;
   @media (max-width: 768px) {
     width: 100%;
     overflow-x: hidden;
@@ -26,7 +28,7 @@ const LogoWrapper = styled.div`
 `
 
 const GiftingWrapper = styled.div`
-
+overflow: hidden;
 
 `
 
@@ -54,6 +56,22 @@ const Overlay = styled.div`
   height: 100%;
   background: rgba(255, 248, 233, 0.8);
   z-index: 2;
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3;
+  }
+`
+
+const OverlayIcon = styled.div`
+  
+  svg {
+    width: 50px;
+    height: 50px;
+  }
 `
 
 
@@ -62,8 +80,16 @@ const IndexPage = () => {
   const [isOpenGift, setIsOpenGift] = useState(false)
   const [isOverlayOpen, setIsOverlayOpen] = useState(false)
   const introTextHu = "Légy szíves, kattints az ajándékdobozra, hogy megtekinthesd a részleteket!"
-  const introTextSrb = "Srb intro text"
+  const introTextSrb = "Molim te klikni na poklon kutiju za dalje detalje"
   const [selectedLanguage, setSelectedLanguage] = useState("hu")
+
+  const handleClose = () => {
+    if(typeof window !== "undefined"){
+      const url = window.location
+      window.location.replace(url.origin)
+    }
+
+  }
 
 
   useEffect(() => {
@@ -95,12 +121,17 @@ const IndexPage = () => {
   return (
     <>
     <GlobalStyle />
-    {isOverlayOpen && <Overlay><Card language={selectedLanguage} isOpen={isOpenGift} /></Overlay>}
+    {isOverlayOpen && <Overlay><div className="close-icon animate__animated animate__fadeInRight animate__delay-1s" onClick={handleClose}><OverlayIcon>
+    <svg width="800px" height="800px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 21.32L21 3.32001" stroke="#B2A38A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 3.32001L21 21.32" stroke="#B2A38A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </OverlayIcon></div><Card language={selectedLanguage} isOpen={isOpenGift} /></Overlay>}
     <Plant />
     <Wrapper>
       <Language currentLanguage={selectedLanguage} />
       <LogoWrapper>
-        <Logo />
+        <Logo currentLanguage={selectedLanguage} />
       </LogoWrapper>
       <Text text={selectedLanguage === 'hu' ? introTextHu : introTextSrb} />
       <GiftingWrapper>
@@ -117,4 +148,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <Seo />;

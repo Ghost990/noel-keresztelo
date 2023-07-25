@@ -10,7 +10,7 @@ const TextWrapper = styled.div`
     text-align: center;
     margin-top: 30px;
     @media (max-width: 768px) {
-        width: 100%;
+        width: 80%;
         padding: 30px;
     }
 `
