@@ -7,6 +7,9 @@ const PlantWrapper = styled.div`
     @media (max-width: 768px) {
         opacity: 0.2;
     }
+    .animate__animated.animate__fadeInLeft {
+        --animate-duration: 1.5s;
+    }
 `
 
 const PlantTopLeft = styled.div`
@@ -28,10 +31,10 @@ const Plant = () => {
   return (
     <PlantWrapper>
         <PlantTopLeft>
-            <img src={PlantImage} width={300} alt="Plant" />
+            <img src={PlantImage} width={300} alt="Plant" className='animate__animated animate__fadeInLeft' />
         </PlantTopLeft>
         <PlantBottomRight>
-            <img src={PlantImage} width={300} alt="Plant" />
+            <img src={PlantImage} width={300} alt="Plant" className='animate__animated animate__fadeInLeft' />
         </PlantBottomRight>
     </PlantWrapper>
   )

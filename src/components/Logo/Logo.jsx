@@ -17,7 +17,7 @@ const LogoWrapper = styled.div`
 
 const Logo = ({ currentLanguage }) => {
   return (
-    <LogoWrapper>
+    <LogoWrapper className='animate__animated animate__fadeInUp'>
         <img src={currentLanguage === 'hu' ? NoelLogo : NoelLogoSrb} width={350} alt="Noel Logo" />
     </LogoWrapper>
   )
