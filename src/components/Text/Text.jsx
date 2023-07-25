@@ -17,7 +17,7 @@ const TextWrapper = styled.div`
 
 const Text = ({text}) => {
   return (
-    <TextWrapper>{text}</TextWrapper>
+    <TextWrapper className='animate__animated animate__fadeInUp animate__delay-1s'>{text}</TextWrapper>
   )
 }
 

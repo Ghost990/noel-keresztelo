@@ -4,8 +4,12 @@ import PlantImage from '../../assets/plant1.svg'
 
 const PlantWrapper = styled.div`
     position: relative;
+    z-index: 1;
     @media (max-width: 768px) {
         opacity: 0.2;
+    }
+    .animate__animated.animate__fadeInLeft {
+        --animate-duration: 1.5s;
     }
 `
 
@@ -28,10 +32,10 @@ const Plant = () => {
   return (
     <PlantWrapper>
         <PlantTopLeft>
-            <img src={PlantImage} width={300} alt="Plant" />
+            <img src={PlantImage} width={300} alt="Plant" className='animate__animated animate__fadeInLeft' />
         </PlantTopLeft>
         <PlantBottomRight>
-            <img src={PlantImage} width={300} alt="Plant" />
+            <img src={PlantImage} width={300} alt="Plant" className='animate__animated animate__fadeInLeft' />
         </PlantBottomRight>
     </PlantWrapper>
   )

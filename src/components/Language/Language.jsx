@@ -21,7 +21,7 @@ const LanguageWrapper = styled.div`
         background-color: #7CA669;
         color: #fff;
     }
-    
+
 `
 
 const FlagWrapper = styled.div`
@@ -44,7 +44,7 @@ const handleChangeLanguage = () => {
 }
 
   return (
-    <div onClick={handleChangeLanguage}>
+    <div onClick={handleChangeLanguage} className='animate__animated animate__fadeInDown animate__delay-1s'>
         <LanguageWrapper> 
             <FlagWrapper>
                 <img src={currentLanguage !== 'hu' ? FlagHu : FlagSrb} width={24} alt="Flag" />
