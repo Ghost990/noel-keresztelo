@@ -43,7 +43,8 @@ const GiftWrapper = styled.div`
     animation: ${GiftAnimation} 1s infinite;
     cursor: pointer;
     overflow: hidden;
-    margin: 2rem;  
+    margin: 2rem;
+    margin-bottom: -100px;
     @media (max-width: 768px) {
         svg {
             width: 200% !important;
