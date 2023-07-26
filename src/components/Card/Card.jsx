@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import InviteImageHu from '../../assets/noel-keresztelo-invite_hu.png'
-import InviteImageSrb from '../../assets/noel-keresztelo-invite_hu.png'
+import InviteImageSrb from '../../assets/noel-keresztelo-invite_srb.png'
 import "animate.css"
 
 const CardWrapper = styled.div`
@@ -31,7 +31,7 @@ const CardWrapper = styled.div`
 const Card = ({ isOpen, language }) => {
 
     const LinkHu = 'https://allusion.hu/noel-keresztelo-invite_hu.pdf'
-    const LinkSrb = 'https://allusion.hu/noel-keresztelo-invite_hu.pdf'
+    const LinkSrb = 'https://allusion.hu/noel-keresztelo-invite_srb.pdf'
 
   return (
     <div className={`animate__animated animate__zoomInUp`}>
